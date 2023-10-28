@@ -1,0 +1,82 @@
+# Global button style
+<Button>:
+    background_normal: ''
+    background_color: 0.178, 0.647, 0.902, 1  # Light blue background color
+    color: 1, 1, 1, 1  # White text color
+    font_size: '18sp'
+<TextInput>:
+    background_color: 1, 1, 1, 1  # White background color
+    foreground_color: 0, 0, 0, 1  # Black text color
+    font_size: '18sp'
+    size_hint_y: None  # Allows you to set a fixed height
+    height: 40  # Set a fixed height for the TextInput
+    padding: [10, 5,5,5]  # Set padding (top, right, bottom, left) as needed
+#:import Color kivy.graphics.Color
+#:import Rectangle kivy.graphics.Rectangle
+
+<CryptoWalletApp>:
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<StartPage>:
+    # Your StartPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<CreatePage>:
+    # Your CreatePage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<ImportPage>:
+    # Your ImportPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<LoginPage>:
+    # Your LoginPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<MainPage>:
+    # Your MainPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<CoinPage>:
+    # Your MainPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<SettingsPage>:
+    # Your MainPage styling goes here
+    canvas.before:
+        Color:
+            rgba: 0.178, 0.647, 0.902, 0.1  # Background color (light blue)
+        Rectangle:
+            pos: self.pos
+            size: self.size
