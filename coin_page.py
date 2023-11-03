@@ -43,10 +43,15 @@ class CoinPage(Screen):
             amount = amount_input.text
             try:
                 txid = send_crypto(symbol, seed, recipient_address, amount)
-                success_message = f"Transaction Successful! TXID: {txid}"
+                success_message = f"Transaction Successful!"
                 popup_content = BoxLayout(orientation='vertical')
                 popup_content.add_widget(Label(text=success_message))
                 copy_button = Button(text='Copy TXID', size_hint_y=None, height=40)
+                popup = Popup(title='Successful!', content=popup_content, size_hint=(None, None), size=(400, 200))
+
+                popup.open()
+                self.gen_address_balance()
+
             except Exception as e:
                 error_message = f"Error: {str(e)}"
                 popup = Popup(title='Error', content=Label(text=error_message), size_hint=(None, None), size=(400, 200))

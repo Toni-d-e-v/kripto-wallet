@@ -5,7 +5,7 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import Screen
 from kivy.core.window import Window
-from kivy.app import App
+from kivymd.app import MDApp
 from coin_page import CoinPage
 from settings_page import SettingsPage
 from config import version
@@ -87,7 +87,7 @@ class MainPage(Screen):
         self.manager.transition.direction = 'rl'  # Set transition direction (optional)
         self.manager.current = 'login'  # Navigate to the login screen
 
-class CryptoWalletApp(App):
+class CryptoWalletApp(MDApp):
     def build(self):
         root = Screen()
         main_page = MainPage(name='main')

@@ -4,7 +4,7 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import Screen
 from kivy.uix.popup import Popup
-from kivy.app import App
+from kivymd.app import MDApp
 from kivy.uix.label import Label
 from kivy.core.clipboard import Clipboard
 from kivy.clock import Clock
@@ -32,7 +32,7 @@ class SettingsPage(Screen):
 
     def show_secret_seed(self, instance):
         # Implement your code to reveal the secret seed here
-        app = App.get_running_app()
+        app = MDApp.get_running_app()
         seed = app.decrypted_seed
         self.show_popup(seed)
 
